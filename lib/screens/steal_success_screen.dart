@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'CreateRealizationScreen.dart';
-import '../models/Idea.dart';
+import 'create_realization_screen.dart';
+import '../models/idea.dart';
 
 class StealSuccessScreen extends StatelessWidget {
   final Idea idea;
 
-  const StealSuccessScreen({required this.idea});
+  const StealSuccessScreen({super.key, required this.idea});
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,9 @@ class StealSuccessScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.done, size: 100, color: Colors.green),
-            Text('Украдено. Теперь это твоё.'),
-            SizedBox(height: 20),
+            const Icon(Icons.done, size: 100, color: Colors.green),
+            const Text('Украдено. Теперь это твоё.'),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -24,7 +24,7 @@ class StealSuccessScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => CreateRealizationScreen(idea: idea)),
                 );
               },
-              child: Text('Сделать из этого что-то'),
+              child: const Text('Сделать из этого что-то'),
             ),
           ],
         ),
