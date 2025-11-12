@@ -1,0 +1,14 @@
+# Flutter
+.dart_tool/
+.ios/
+.android/
+build/
+*.jks
+*.keystore
+pubspec.lock
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
