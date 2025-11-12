@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:steal_this_app/models/Idea.dart';
-import 'package:steal_this_app/services/ApiService.dart';
-import '../screens/StealSuccessScreen.dart';
+import '../models/idea.dart';
+import '../screens/steal_success_screen.dart';
+import '../services/firestore_service.dart';
 
 class StealButton extends StatelessWidget {
   final Idea idea;
 
-  const StealButton({required this.idea});
+  const StealButton({super.key, required this.idea});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        ApiService.stealIdea(idea.id);
+        FirestoreService.stealIdea(idea.id);
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => StealSuccessScreen(idea: idea)),
@@ -22,7 +22,7 @@ class StealButton extends StatelessWidget {
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,
       ),
-      child: Text('Украсть'),
+      child: const Text('Украсть'),
     );
   }
 }
