@@ -10,14 +10,35 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.14.0
+  http: ^1.6.0
   shared_preferences: ^2.0.0
   image_picker: ^1.0.0
+  # Firebase
+  firebase_core: ^3.1.0
+  firebase_auth: ^5.1.0
+  cloud_firestore: ^5.0.0
+  firebase_storage: ^12.1.0
+  firebase_messaging: ^15.0.0
+  # Уведомления
+  flutter_local_notifications: ^17.2.2
+  # Мессенджер
+  url_launcher: ^6.3.0
+  # Состояние
+  provider: ^6.1.1
+  # Яндекс.Мобайлдев
+  yandex_mobile_ads: ^1.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutterfire_cli: ^0.4.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/fonts/
+  fonts:
+    - family: Caveat
+      fonts:
+        - asset: assets/fonts/Caveat-Regular.ttf
